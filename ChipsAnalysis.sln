@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChipsAnalysis", "ChipsAnalysis\ChipsAnalysis.csproj", "{67469747-CA8D-4762-B1E9-E31B63905F4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{3F037420-488F-4191-B1DB-144AA4FADFC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{67469747-CA8D-4762-B1E9-E31B63905F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67469747-CA8D-4762-B1E9-E31B63905F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67469747-CA8D-4762-B1E9-E31B63905F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F037420-488F-4191-B1DB-144AA4FADFC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F037420-488F-4191-B1DB-144AA4FADFC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F037420-488F-4191-B1DB-144AA4FADFC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F037420-488F-4191-B1DB-144AA4FADFC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
