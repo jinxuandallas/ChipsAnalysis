@@ -15,9 +15,18 @@ namespace Core
 
         }
 
-        public bool UpdatePriceandPerformance(int id,double price,double costPerformance)
+        //public bool UpdateCPUPriceandPerformance(int id,double price,double costPerformance)
+        //{
+        //    ExecuteSql("update CPU set 价格=@价格,性价比=@性价比 where id=@id", new SqlParameter[] { new SqlParameter ("@价格",price),
+        //        new SqlParameter("@性价比",costPerformance),
+        //        new SqlParameter("@id",id)
+        //    });
+        //    return true;
+        //}
+
+        public bool UpdatePriceandPerformance(string tablename, int id, double price, double costPerformance)
         {
-            ExecuteSql("update CPU set 价格=@价格,性价比=@性价比 where id=@id", new SqlParameter[] { new SqlParameter ("@价格",price),
+            ExecuteSql("update " + tablename + " set 价格=@价格,性价比=@性价比 where id=@id", new SqlParameter[] { new SqlParameter ("@价格",price),
                 new SqlParameter("@性价比",costPerformance),
                 new SqlParameter("@id",id)
             });

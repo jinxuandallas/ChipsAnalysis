@@ -1,53 +1,21 @@
-﻿.
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ChipsAnalysis.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GraphicsCard.aspx.cs" Inherits="ChipsAnalysis.GraphicsCard" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <%--<link href="css/main.css" rel="stylesheet" />
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/table.min.js"></script>
-    <script src="js/search.js"></script>
-    <script type="text/javascript">
-      $(function(){
-          $("table#GridView1").stupidtable();
-		  $("table#GridView1 tr:odd").addClass("oddtr");
-      $("table#GridView1 tr").hover(
-         function(){
-                   $(this).addClass("hover");
-         },
-         function(){
-                   $(this).removeClass("hover");
-         });
-      });
-    </script>--%>
 </head>
 <body>
-
-    <%--<form name="f1" action="" onsubmit="if(this.t1.value!=null && this.t1.value!='')
-						findString(this.t1.value);return false">
-						<input class="wickEnabled" type="text" name="t1" id="txt1" autocomplete="OFF">--%>
-
-
     <form id="form1" runat="server">
-
-<%--        <asp:ScriptManager ID="ScriptManager1" runat="server">
-        </asp:ScriptManager>--%>
-
-        <%--<input class="wickEnabled" type="text" name="t1" id="txt1" autocomplete="OFF"/>
-		
-            <input type="button" name="b1" value="搜索CPU" onclick="if(this.t1.value!=null && this.t1.value!='') findString(this.t1.value)"/>--%>
-       <%-- <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-            <ContentTemplate>--%>
-                <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="Id" DataSourceID="SqlDataSource1" GridLines="Vertical" PageSize="30" AutoGenerateSelectButton="True">
+        <div>
+            <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="Id" DataSourceID="SqlDataSource2" GridLines="Vertical" PageSize="30" AutoGenerateSelectButton="True">
                     <AlternatingRowStyle BackColor="#DCDCDC" />
                     <Columns>
                         <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" Visible="False" />
                         <asp:BoundField DataField="排名" HeaderText="排名" SortExpression="排名" />
-                        <asp:BoundField DataField="处理器" HeaderText="处理器" SortExpression="处理器" />
+                        <asp:BoundField DataField="显卡" HeaderText="显卡" SortExpression="显卡" />
                         <asp:BoundField DataField="图形" HeaderText="图形" SortExpression="图形" />
                         <asp:BoundField DataField="分数" HeaderText="分数" SortExpression="分数" />
                         <asp:BoundField DataField="品牌" HeaderText="品牌" SortExpression="品牌" Visible="False" />
@@ -75,9 +43,8 @@
 
 
 
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [CPU]"></asp:SqlDataSource>
-            <%--</ContentTemplate>
-        </asp:UpdatePanel>--%>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Graphics]"></asp:SqlDataSource>
+        </div>
     </form>
 </body>
 </html>

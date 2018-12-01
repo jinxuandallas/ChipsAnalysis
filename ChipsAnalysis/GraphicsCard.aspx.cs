@@ -8,7 +8,7 @@ using Core;
 
 namespace ChipsAnalysis
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class GraphicsCard : System.Web.UI.Page
     {
         protected business b;
         protected void Page_Load(object sender, EventArgs e)
@@ -17,7 +17,6 @@ namespace ChipsAnalysis
             if (!IsPostBack)
                 DataBind();
         }
-
 
         protected void Update_Click(object sender, EventArgs e)
         {
@@ -38,10 +37,10 @@ namespace ChipsAnalysis
             int id = int.Parse(GridView1.DataKeys[index].Value.ToString());
 
             float price = Convert.ToSingle(priceTextBox.Text);
-            double costPerformance =Math.Round( Convert.ToInt32(GridView1.Rows[index].Cells[5].Text) / price,4);
+            double costPerformance = Math.Round(Convert.ToInt32(GridView1.Rows[index].Cells[5].Text) / price, 4);
             //Response.Write(costPerformance);
 
-            b.UpdatePriceandPerformance("CPU", id, price, costPerformance);
+            b.UpdatePriceandPerformance("Graphics", id, price, costPerformance);
             DataBind();
 
         }
@@ -56,7 +55,7 @@ namespace ChipsAnalysis
             ShowButton(sender, false);
         }
 
-        protected void ShowButton(object sender,bool isShow)
+        protected void ShowButton(object sender, bool isShow)
         {
             int index = Convert.ToInt32((sender as Button).CommandArgument);
 
