@@ -32,5 +32,16 @@ namespace Core
             });
             return true;
         }
+
+        public double UpdatePrice(string tablename,int id,double price)
+        {
+            using (SqlDataReader sdr = GetDataReader("update " + tablename+ " set 价格=@价格,性价比=cast(分数/@价格  AS NUMERIC(18,4))  where id=@id;select 性价比 from " + tablename+" where id=@id",new SqlParameter[]{ new SqlParameter ("@价格",price),
+                new SqlParameter("@id",id)
+            }))
+            {
+                sdr.Read();
+                return double.Parse(sdr[0].ToString());
+            }
+        }
     }
 }

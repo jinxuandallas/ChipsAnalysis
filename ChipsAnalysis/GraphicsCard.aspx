@@ -23,7 +23,7 @@
                             <ItemTemplate>
                                 <asp:Label ID="PriceLabel" Text='<%# Eval("价格") %>' runat="server"></asp:Label>
                                 <asp:TextBox ID="PriceTextBox" Text='<%# Eval("价格") %>' TextMode="Number" Visible="false" Width="80px" runat="server"></asp:TextBox>
-                                <asp:Button ID="Edit" Text="编辑" OnClick="Edit_Click" CommandArgument="<%# Container.DataItemIndex %>" runat="server" />
+                                <asp:Button  ID="Edit" Text="编辑" OnClick="Edit_Click" CommandArgument="<%# Container.DataItemIndex %>" runat="server" />
                                 <asp:Button ID="Update" Text="更新" OnClick="Update_Click" CommandArgument="<%# Container.DataItemIndex %>" Visible="false" runat="server" />
                                 <asp:Button ID="Cancel" Text="取消" OnClick="Cancel_Click" CommandArgument="<%# Container.DataItemIndex %>" Visible="false" runat="server" />
                             </ItemTemplate>

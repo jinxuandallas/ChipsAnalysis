@@ -75,9 +75,11 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="GraphicsCard.aspx" />
+    <Content Include="GraphicsCardAJAX.aspx" />
     <Content Include="js\jquery-3.3.1.min.js" />
     <Content Include="js\search.js" />
     <Content Include="js\table.min.js" />
+    <Content Include="Test.aspx" />
     <Content Include="WebCrawler.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -99,7 +101,21 @@
     <Compile Include="GraphicsCard.aspx.designer.cs">
       <DependentUpon>GraphicsCard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GraphicsCardAJAX.aspx.cs">
+      <DependentUpon>GraphicsCardAJAX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GraphicsCardAJAX.aspx.designer.cs">
+      <DependentUpon>GraphicsCardAJAX.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebCrawler.aspx.cs">
       <DependentUpon>WebCrawler.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
